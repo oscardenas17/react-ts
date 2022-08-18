@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import Form from "./components/Form";
 import List from "./components/List";
 
 
@@ -54,6 +55,7 @@ function App() {
     <div className="App">
       <h1>Streaming Subs</h1>
       <List subs={subs}/>
+      <Form />
     </div>
   );
 }
