@@ -8,7 +8,12 @@ interface FormState {
 }
 
 
-const Form = () => {
+//props de formulario
+interface FormProps {
+  onNewSub: (newSub: Sub) => void
+}
+
+const Form = (  {onNewSub} : FormProps )   => {
 
   const [inputValues, setInputValues] = useState<FormState["inputValues"]>({
     nick:'',
@@ -17,7 +22,12 @@ const Form = () => {
     description:''
   })
 
-    const handleSubmit = () => {}
+
+  //props de formulario
+    const handleSubmit = (evt: React.FormEvent<HTMLFormElement>) => {
+      evt.preventDefault()
+      onNewSub(inputValues)
+    }
 
     const handleChange = (evt:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement >) => {
       setInputValues({

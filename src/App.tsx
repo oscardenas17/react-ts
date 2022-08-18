@@ -51,11 +51,16 @@ function App() {
     setsubs(INITIAL_STATE);
   }, []);
 
+  //props de formulario
+  const handleNewSub = (newSub: Sub): void => {
+    setsubs(subs => [...subs, newSub])
+  }
+
   return (
     <div className="App">
       <h1>Streaming Subs</h1>
       <List subs={subs}/>
-      <Form />
+      <Form onNewSub={handleNewSub} />
     </div>
   );
 }
