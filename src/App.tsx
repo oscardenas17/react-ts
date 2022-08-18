@@ -21,8 +21,15 @@ interface Sub {
   description?: string;
 }
 
+interface AppState {
+  subs:  Array<Sub>
+  newSubsNumber: number
+}
+
 function App() {
-  const [subs, setsubs] = useState<Array<Sub>>([]);
+  // const [subs, setsubs] = useState<Array<Sub>>([]);
+  const [subs, setsubs] = useState<AppState['subs']>([]);
+  const [newSubsNumber, setNewSubsNumber] = useState<AppState['newSubsNumber']>(0);
   // const [subs, setsubs] = useState([
   //  {
   //   nick: 'osdacaur',
