@@ -1,12 +1,16 @@
 import { render } from '@testing-library/react';
+import {Sub} from '../types.d'
 interface Props {
-  subs: Array<{
-    nick: string;
-    avatar: string;
-    subMonths: number;
-    description?: string;
-  }>;
+  subs: Array<Sub>;
 }
+// interface Props {
+//   subs: Array<{
+//     nick: string;
+//     avatar: string;
+//     subMonths: number;
+//     description?: string;
+//   }>;
+// }
 
 
 // const List: React.FC<Props> = ({ subs }) => {

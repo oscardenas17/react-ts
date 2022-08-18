@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Form from "./components/Form";
 import List from "./components/List";
-
+import {Sub} from './types.d'
 
 const INITIAL_STATE = [
   {
@@ -17,12 +17,12 @@ const INITIAL_STATE = [
     avatar: "https://i.pravatar.cc/150?u=yesido",
   },
 ];
-interface Sub {
-  nick: string;
-  avatar: string;
-  subMonths: number;
-  description?: string;
-}
+// interface Sub {
+//   nick: string;
+//   avatar: string;
+//   subMonths: number;
+//   description?: string;
+// }
 
 interface AppState {
   subs:  Array<Sub>
